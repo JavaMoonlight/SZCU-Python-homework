@@ -22,12 +22,13 @@ helloFile.close()
 
 #（4）以r模式读取第一行内容,并除去此行前后的空格、制表符、换行符
 helloFile = open('D:\\王一通\\后端\\Python\\代码\\homework\\t1.txt','r',encoding='utf-8')
-helloRead = helloFile.readline()
+helloRead = helloFile.readline().strip()
 print(helloRead)
 helloFile.close()
 
 #（5）以a+模式打开文件，先追加一行:'老男孩教育'然后在从最开始将原内容全部读取出来
 helloFile = open('D:\\王一通\\后端\\Python\\代码\\homework\\t1.txt','a+',encoding='utf-8')
+# seek() 方法用于移动文件读取指针到指定位置
 helloFile.seek(0)
 helloRead = helloFile.read()
 helloWrite = helloFile.write("\n老男孩教育")
