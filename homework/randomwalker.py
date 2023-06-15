@@ -42,7 +42,7 @@ def walk(h,z,map,count,num):
 def main():
     print("请输入一个整数n，将生成2n*2n的正方形")
     n = int(input())
-    map = np.zeros((2*n, 2*n))
+    map = np.zeros([2*n, 2*n])
     print(map)
     print()
     Init(n,map)
